@@ -1,0 +1,517 @@
+<html>
+    <head>
+        <title>리움박물관</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="./style.css"/>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <style>
+         
+            
+
+            .swiper {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+               top: 0;
+               display: block;
+               z-index: -1;
+            }
+
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+            }
+            .swiper-button-next::after,
+               .swiper-button-prev::after 
+               {display: none;
+            }
+            .swiper-pagination{
+                position: absolute;
+                bottom: -30px;
+                text-align:right;
+   
+            }
+           
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <div class="header_box">
+                <div class="page_button">
+                    <button type="button" onclick="movePage('/')">대문</button>
+                    <button type="button" onclick="movePage('/hoam')">호암</button>
+                </div>
+                <div class="logo_cont">
+                    <a href="https://www.leeumhoam.org/leeum">
+                        <img src="img/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="gnb_box">
+               
+                    <ul>
+                        <li>방문안내
+                            <ul class="gnb_lnb">
+                                <li>전시 예약</li>
+                                <li>관람 시간</li>
+                                <li>관람 요금</li>
+                                <li>오시는 길</li>
+                                <li>층별안내</li>
+                                <li>카페와 스토어</li>
+                                <li>디지털 가이드 DID</li>
+                                <li>자주하는 질문</li>
+
+                            </ul>
+                        </li>
+                        <li>전시
+                            <ul class="gnb_lnb">
+                                <li>현재전시</li>
+                                <li>예정전시</li>
+                                <li>과거전시</li>
+
+                            </ul>
+                        </li>
+                        <li>소장품
+                            <ul class="gnb_lnb">
+                                <li>고미술</li>
+                                <li>현대미술</li>
+                                <li>보존</li>
+                                <li>수어해설</li>
+
+                            </ul>
+                        </li>
+                        <li>배움·연구
+                            <ul class="gnb_lnb">
+                                <li>프로그램</li>
+                                <li>아카이브</li>
+                                <li>출판</li>
+                                <li>영상자료</li>
+
+                            </ul>
+                        </li>
+                        <li>멤버십
+                            <ul class="gnb_lnb">
+                                <li>가입과 안내</li>
+                                <li>프로그램과 혜택</li>
+                                <li>뉴스레터</li>
+                                <li>멤버십 공지</li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="nav_bacground">
+                    <p>
+                        안녕하세요,
+                    <br>
+                    리움미술관을 방문해주셔서 감사합니다.
+                </p>
+                </div>
+                <div class="right_button">
+                    <button type="button" onclick="Lang('/')">ENG</button>
+                    <button type="button" onclick="movePage('/hoam')">로그인</button>
+                    <button type="button" onclick="movePage('/hoam')">회원가입</button>
+                </div>
+            </div>
+        </header>
+        <!------------main------------>
+        <main>
+            <!----------swiper----------->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bacinfo">
+                            <span>강서경: 버들 북 꾀꼬리</span>
+                            <button
+                                type="button"
+                                onclick="location.href ='https://www.leeumhoam.org/leeum/exhibition/70?params=Y'">상세보기</button>
+                            <div class="bactxt">
+                                <p>M2</p>
+                                <p>2023.09.07. ~ 2023.12.31.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bacinfo">
+                            <span>김범 개인전 《바위가 되는 법》</span>
+                            <button
+                                type="button"
+                                onclick="location.href ='https://www.leeumhoam.org/leeum/exhibition/70?params=Y'">상세보기</button>
+                            <div class="bactxt">
+                                <p >블랙박스, 그라운드 갤러리</p>
+                                <p>2023.07.27. ~ 2023.12.03.</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                   
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            <div class="menu_bar">
+                <button class="custom_button" aria-label="사용자 설정">
+                    <img src="img/m.svg">
+                </button>
+                <button class="menu" onclick="toggle()" aria-label="메뉴바">
+                    <img src="img/menu 02.svg"></button>
+            </div>
+            <!------------전시--------------->
+            <div class="main_wrap">
+                <div class="main_cont">
+                    <div class="title">
+                        <p>전시</p>
+                        <button type="button" onclick="movePage('/leeum/exhibition')">더보기
+                        </button>
+                    </div>
+                    <div class="post_box">
+                        <div class="post_cont">
+                            <a href="https://www.leeumhoam.org/leeum/exhibition/61">
+                                <div class="info-img">
+                                    <img
+                                        src="https://www.leeumhoam.org/upload/exhibition/1689581840787_park_thumb.jpg"
+                                        alt="박보마:물질의 의식">
+                                </div>
+                                <div class="post_txt">
+                                    <span>박보마 : 물질의 의식</span>
+                                </div>
+                                <div class="txt_group">
+                                    <p>로비</p>
+                                    <p>2023.07.25. ~ 2023.12.24.</p>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="post_cont">
+                            <a href="https://www.leeumhoam.org/leeum/exhibition/75">
+                                <div class="info-img">
+                                    <img
+                                        src="https://www.leeumhoam.org/upload/exhibition/1697420956631_GPK_web_desktop_re%20%EC%9D%BC%EB%B0%98.jpg"
+                                        alt="《갈라 포라스-킴: 국보》의 이미지">
+                                </div>
+                                <div class="post_txt">
+                                    <span>《갈라 포라스-킴: 국보》</span>
+                                </div>
+                                <div class="txt_group">
+                                    <p>M1, 2층</p>
+                                    <p>2023.10.31. ~ 2024.03.31.</p>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <hr size="1px" color="#e9e9e9">
+
+                <!------------소장품-------->
+
+                <div class="main_cont">
+                    <div class="title">
+                        <p>소장품</p>
+                        <button type="button" onclick="movePage('/leeum/exhibition')">더보기
+                        </button>
+                    </div>
+                    <div class="collection_box">
+                        <div class="collect_info">
+                            <a href="https://www.leeumhoam.org/leeum/collection/modern/807">
+                                <div class="img">
+                                    <img
+                                        src="https://www.leeumhoam.org/upload/museum/1(6).jpg"
+                                        alt="무제(좋은 소식, 나쁜 소식)"></div>
+                                <div class="collect_txt">
+                                    <span>무제(좋은 소식, 나쁜 소식)</span>
+
+                                    <div class="txt_box">
+                                        <p>리처드 프린스 | 1988</p>
+                                        <p>캔버스에 아크릴 물감과 실크스크린</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="collect_info">
+                            <a href="https://www.leeumhoam.org/leeum/collection/modern/806">
+                                <div class="img">
+                                    <img
+                                        src="https://www.leeumhoam.org/upload/museum/t_dzi1689841485753_%EC%82%AC%EB%A7%89%20%EC%83%98%ED%94%8C.jpg"
+                                        alt="사막 샘플">
+                                </div>
+                                <div class="collect_txt">
+                                    <span>사막 샘플</span>
+
+                                    <div class="txt_box">
+                                        <p>가브리엘 오로즈코 | 2010</p>
+                                        <p>혼합 재료</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="collect_info">
+                            <a href="https://www.leeumhoam.org/leeum/collection/modern/809">
+                                <div class="img">
+                                    <img
+                                        src="https://www.leeumhoam.org/upload/museum/t_dzi1690275606166_%EB%A7%A4%EC%B9%B4%EC%8B%9C%20%EC%8B%AC%EC%88%A0%EC%9D%B4.jpg"
+                                        alt="설백(雪白) 난쟁이(심술이), 설백(雪白) 난쟁이(잠꾸러기2)">
+                                </div>
+                                <div class="collect_txt">
+                                    <span>설백(雪白) 난쟁이(심술이), 설백(雪白) 난쟁이(잠꾸러기2)</span>
+
+                                    <div class="txt_box">
+                                        <p>폴 매카시 | 2012</p>
+                                        <p>실리콘</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="collect_info">
+                            <a href="https://www.leeumhoam.org/leeum/collection/modern/808">
+                                <div class="img">
+                                    <img
+                                        src="https://www.leeumhoam.org/upload/museum/%EC%97%BC%EC%A7%80%ED%98%9C%201.jpg"
+                                        alt="심바이오플롯: 함께 사는 터">
+                                </div>
+                                <div class="collect_txt">
+                                    <span>심바이오플롯: 함께 사는 터</span>
+
+                                    <div class="txt_box">
+                                        <p>염지혜 | 2020</p>
+                                        <p>단채널 영상, 컬러, 사운드</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr size="1px" color="#e9e9e9">
+
+                <!--------영상 자료--------------->
+
+                <div class="main_cont">
+                    <div class="title">
+                        <p>영상·자료</p>
+                        <button type="button" onclick="movePage('/leeum/exhibition')">더보기
+                        </button>
+                    </div>
+                    <div class="cont_box">
+                        <div class="cont_grid">
+                            <a href="https://www.leeumhoam.org/leeum/edu/media/233">
+                                <div class="cont_img">
+                                    <img
+                                        src="https://www.leeumhoam.org/upload/media/1694762633421_%ED%83%80%EC%9D%B8%EC%9D%98%20%EA%B3%B5%EA%B0%84%206re.jpg"
+                                        alt="감각너머 2023 워크숍 《타인의 공간》">
+                                </div>
+                                <div class="cont_info">
+                                    <span>감각너머 2023 워크숍 《타인의 공간》</span>
+                                    <div class="info_txt">
+                                        <p>어린이·청소년</p>
+                                        <p>《타인의 공간》 워크숍은 다양한 몸의 조건을 가진 참가자들이 상호주관적으로 만나 몸과 몸의 관계, 그리고 공간과의 관계를 미디어 매체를
+                                            활용하여 경험하고 감각을 확장하는 시간입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cont_grid">
+                            <a href="https://www.leeumhoam.org/leeum/edu/media/232">
+                                <div class="cont_img">
+                                    <img
+                                        src="https://www.leeumhoam.org/upload/media/1694507257248_%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202023-09-12%20170559.png"
+                                        alt="박보마 | 인터뷰 | 《물질의 의식》">
+                                </div>
+                                <div class="cont_info">
+                                    <span>박보마 | 인터뷰 | 《물질의 의식》</span>
+                                    <div class="info_txt">
+                                        <p>전시</p>
+                                        <p>박보마는 드로잉과 오브제, 우발적인 행위와 향 등 다양한 매체와 다중적인 정체성을 경유하여 빛이나 공기처럼 가변적인 물질과 여성적 혹은
+                                            부차적으로 취급되는 존재를 위한 자리를 만드는 작가입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cont_grid">
+                            <a href="https://www.leeumhoam.org/leeum/edu/media/229">
+                                <div class="cont_img">
+                                    <img
+                                        src="https://www.leeumhoam.org/upload/media/1690287217450_%EA%B0%95%EC%9E%AC%EC%9B%90%EC%9D%B8%ED%84%B0%EB%B7%B0.JPG"
+                                        alt="강재원 | 인터뷰 | 《Exo7》">
+                                </div>
+                                <div class="cont_info">
+                                    <span>강재원 | 인터뷰 | 《Exo7》</span>
+                                    <div class="info_txt">
+                                        <p>전시</p>
+                                        <p>이번 전시에서 강재원은 𝘌𝘹𝘰7이라고 이름 붙인 하나의 형태를 다양한 크기와 재질로 선보입니다. 이들은 같은 형태를 바탕으로 하지만
+                                            각각 다른 상태를 나타냅니다. 중앙의 거대한 조각은 풍선처럼 바람을 불어넣어서 모양을 유지시키는 인플레이터블로, 한쪽 귀퉁이가 천장을 뚫고 나간
+                                            것처럼 보입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr size="1px" color="#e9e9e9">
+
+                <!--------공지--------->
+                <div class="main_cont">
+                    <div class="title">
+                        <p>공지</p>
+                        <button type="button" onclick="movePage('/leeum/exhibition')">더보기
+                        </button>
+                    </div>
+
+                    <ul class="notice_box">
+                        <li>
+                            <a href="https://www.leeumhoam.org/leeum/info/notice/124">
+                                <큰 나무와="나무와" 눈="눈">,
+                                    <하늘 거울="거울">
+                                        작품 철수에 따른 데크 출입 제한 : 11월 1일(수) ~
+                                    </a>
+                                    <p>2023.10.30.</p>
+                                </li>
+                                <li>
+                                    <a href="https://www.leeumhoam.org/leeum/info/notice/122">
+                                        리움미술관 ↔ 호암미술관 셔틀버스 예약제 시행 (10/31~12/28)
+                                    </a>
+                                    <p>2023.10.24.</p>
+                                </li>
+                                <li>
+                                    <a href="https://www.leeumhoam.org/leeum/info/notice/119">
+                                        고미술 상설전 2층 《감상과 취향》 관람 제한 안내 (10/17 ~ 10/29)
+                                    </a>
+                                    <p>2023.10.16.</p>
+                                </li>
+                                <li>
+                                    <a href="https://www.leeumhoam.org/leeum/info/notice/117">
+                                        삼성문화재단 전시행정(계약직) 채용
+                                    </a>
+                                    <p>2023.10.16.</p>
+                                </li>
+                                <li>
+                                    <a href="https://www.leeumhoam.org/leeum/info/notice/115">
+                                        리움미술관 ↔ 호암미술관 셔틀버스 운행 안내 (10/10~12/28)
+                                    </a>
+                                    <p>2023.10.06.</p>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </main>
+                <footer>
+                    <div class="ft_info">
+                        <div class="info_txt">
+                            <span>리움박물관</span>
+                            <p>04348 서울특별시 용산구 이태원로55길 60-16</p>
+                            <p>대표전화. 02-2014-6900</p>
+                        </div>
+                        <ul class="sns">
+                            <li>
+                                <a href="https://www.instagram.com/leeummuseumofart/">
+                                    <div><img src="img/instgram.svg" alt="sns">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCyXVnJijxHsBrzN9AAZ-Yxw">
+                                    <div><img src="img/youtube.svg" alt="sns">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/leeumofficial">
+                                    <div><img src="img/facebook.svg" alt="sns">
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="ft_desc">
+                        <div class="desc_info">
+                            <ul class="desc_ul">
+                                <li>
+                                    <a href="/leeum/info/museum">미술관 소개</a>
+                                </li>
+                                <li>
+                                    <a href="/leeum/info/notice">공지</a>
+                                </li>
+                                <li>
+                                    <a href="/leeum/info/news">보도자료</a>
+                                </li>
+                                <li>
+                                    <a href="/leeum/info/company">법인회원</a>
+                                </li>
+                            </ul>
+                            <ul class="desc_link">
+                                <li>이메일 문의</li>
+                                <li>개인정보 처리방침</li>
+
+                            </ul>
+                        </div>
+                        <p>Ⓒ Leeum Museum of Art, All Rights Reserved.</p>
+                        <div class="ft_img">
+                            <div class="ftimg_isoimg">
+                                <button title="새창열림" onclick="isoImg(1)">
+                                    <img src="https://www.leeumhoam.org/img/iso/ISO%2014001.jpg">
+                                </button>
+                                <button title="새창열림" onclick="isoImg(2)">
+                                    <img src="https://www.leeumhoam.org/img/iso/ISO%2045001.jpg">
+                                </button>
+                            </div>
+                            <div class="family_site">
+                                <label for="family-select">이동할 패밀리 사이트 선택</label>
+                                <select
+                                    onchange="if(this.value !== '') movePage(this.value)"
+                                    aria-label="Jump to"
+                                    id="family_select">
+                                    <option value="familysite">패밀리 사이트</option>
+                                    <option value="samsungculture">삼성재단</option>
+                                    <option value="hoam">호암미술관</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </footer>
+                <!-- Swiper JS -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                        spaceBetween: 30,
+                        centeredSlides: true,
+                        autoplay: {
+                            delay: 2500,
+                            disableOnInteraction: false
+                        },
+                        loof : false,
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev"
+                        }
+                    });
+                  
+                </script>
+                <script src="/jqurery-3.6.1.min.js"></script>
+
+                <script src="./script.js"></script>
+            </body>
